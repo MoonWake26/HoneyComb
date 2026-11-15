@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Honeycomb1",
-    "path":"Honeycomb1.yyp",
+    "name":"honeycomb1backup",
+    "path":"honeycomb1backup.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
