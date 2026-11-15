@@ -1,0 +1,14 @@
+# GameMaker build / temp files
+/Debug/
+/Release/
+/output/
+/cache/
+/tmp/
+*.tmp
+*.bak
+*.yyp.bak
+
+# Computer junk
+.DS_Store
+Thumbs.db
+desktop.ini

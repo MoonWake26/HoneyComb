@@ -1,0 +1,11 @@
+label   = "Examine: Something";
+lines   = ["Nothing to see."];      // first interaction
+note    = "";                       // notebook note id to set, e.g. "flower"
+sys     = "";                       // pre-flight key to tick, e.g. "comms"
+lines2  = [];                       // second interaction (optional)
+note2   = "";
+sys2    = "";
+repeat_lines  = [];                       // 3rd+ interactions
+done    = false;
+done2   = false;
+on_done = undefined;                // optional method, e.g. method(id, scr_my_code)

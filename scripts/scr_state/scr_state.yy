@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_state",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_state",
+  "parent":{
+    "name":"Honeycomb1",
+    "path":"Honeycomb1.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
