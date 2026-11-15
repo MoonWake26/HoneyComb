@@ -18,11 +18,12 @@ function game_init() {
     };
 
     // Dialogue box state (filled by dialogue_start)
-    global.dlg = { active: false, text: "", shown: 0, queue: [] };
+    global.dlg = { active: false, text: "", shown: 0, queue: [], speaker: "", face: -1 };
+
 
     // Fade transition state
     global.trans = { active: false, alpha: 0, phase: 1, target: room_first };
-
+	global.pending_room = noone;
     // Which hotspot the player is standing next to (noone = nothing)
     global.hover = noone;
 

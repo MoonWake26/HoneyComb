@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"obj_solid",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"Honeycomb1",
-    "path":"Honeycomb1.yyp",
+    "name":"objects",
+    "path":"folders/objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,8 +28,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":null,
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_wall",
+    "path":"sprites/spr_wall/spr_wall.yy",
+  },
   "visible":true,
 }

@@ -1,5 +1,10 @@
 // 1) Dialogue typing + advancing
 dlg_step();
+if (global.pending_room != noone && !global.dlg.active && !global.trans.active) {
+    var _next_room = global.pending_room;
+    global.pending_room = noone;
+    goto_room(_next_room);
+}
 
 // 2) Fade transitions
 if (global.trans.active) {
@@ -19,12 +24,21 @@ if (global.trans.active) {
     }
 }
 
-// 3) Find the nearest hotspot to the player, then act on E
+// 3) Find the nearest hotspot to the character, then act on E
 global.hover = noone;
-if (instance_exists(obj_player) && !global.dlg.active && !global.trans.active) {
+
+// Use obj_astronaut if it exists (all rooms after the apiary), otherwise obj_player (apiary)
+var _pl = noone;
+if (instance_exists(obj_astronaut)) {
+    _pl = obj_astronaut;
+} else if (instance_exists(obj_player)) {
+    _pl = obj_player;
+}
+
+if (_pl != noone && !global.dlg.active && !global.trans.active) {
     var _best = 9999;
     with (obj_hotspot) {
-        var _d = point_distance(x, y, obj_player.x, obj_player.y);
+        var _d = point_distance(x, y, _pl.x, _pl.y);
         if (_d < 46 && _d < _best) {
             _best = _d;
             global.hover = id;

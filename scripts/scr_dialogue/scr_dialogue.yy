@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_dialogue",
   "parent":{
-    "name":"Honeycomb1",
-    "path":"Honeycomb1.yyp",
+    "name":"scripts",
+    "path":"folders/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -25,5 +25,32 @@ if (place_meeting(x, y, obj_solid)) x -= hsp;
 y += vsp;
 if (place_meeting(x, y, obj_solid)) y -= vsp;
 
+// ---- Animation (frames driven manually, no image_speed) ----
+if (!variable_instance_exists(id, "facing"))    facing = "down";
+if (!variable_instance_exists(id, "walk_anim")) walk_anim = 0;
+
+image_speed = 0; // we control the frame ourselves
+
+var _moving = (abs(hsp) > 0.2 || abs(vsp) > 0.2);
+
+if (_moving) {
+    if (abs(hsp) > abs(vsp)) facing = (hsp > 0) ? "right" : "left";
+    else                     facing = (vsp > 0) ? "down"  : "up";
+
+    walk_anim += 0.15;           // lower = slower legs
+    if (walk_anim >= 4) walk_anim -= 4;
+} else {
+    walk_anim = 0;               // standing frame
+}
+
+switch (facing) {
+    case "up":    sprite_index = spr_francis_up;    break;
+    case "down":  sprite_index = spr_francis_down;  break;
+    case "left":  sprite_index = spr_francis_left;  break;
+    case "right": sprite_index = spr_francis_right; break;
+}
+
+image_index = floor(walk_anim);
+
 // Sort so the player walks behind things above him
 depth = -y;

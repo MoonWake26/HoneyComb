@@ -1,0 +1,12 @@
+game_fps = 60;
+marker  = 0.5;          // 0..1 position of the ship's tilt
+vel     = 0;
+t       = 0;
+zone    = 0.5;          // centre of the safe zone
+zone_w  = 0.18;         // width of the safe zone
+hold    = 0;
+need    = game_fps * 3;      // 3 seconds inside the zone
+heat    = 0;            // heat builds while outside
+state   = "play";       // play / win / fail
+state_t = 0;
+msg     = "";
